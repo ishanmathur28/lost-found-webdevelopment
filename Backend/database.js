@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const dbURI = 'mongodb://localhost:27017/lost_found'; 
+const { mongoURI } = require('./config/keys');
+// const dbURI = 'mongodb://localhost:27017/lost_found'; 
+const dbURI = mongoURI;
 
 mongoose.connect(dbURI)
   .then(() => console.log('MongoDB Connected'))
