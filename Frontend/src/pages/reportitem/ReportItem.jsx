@@ -26,7 +26,8 @@ const ReportItemSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/item/submit', formData);
+      // const response = await axios.post('http://localhost:5000/item/submit', formData);
+      const response = await axios.post('https://lost-found-webdevelopment.onrender.com/item/submit', formData);
       console.log(response.data.message);
       toast.success('Report of the item submitted to the Admin.');
       setFormData({
